@@ -7,20 +7,24 @@
   
   
   
-  <title>clay-test 语言测试 | ClayZhang&#39;s Blog</title>
+  <title>HttpClient+Jsoup 抓取网页信息（网易贵金属为例） | ClayZhang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试">
-<meta name="keywords" content="test">
+  <meta name="description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
+<meta name="keywords" content="HttpClient+Jsoup">
 <meta property="og:type" content="article">
-<meta property="og:title" content="clay-test 语言测试">
-<meta property="og:url" content="http://clayzhang0403.github.io/2018/05/17/clay-test/index.html">
+<meta property="og:title" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">
+<meta property="og:url" content="http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/index.html">
 <meta property="og:site_name" content="ClayZhang&#39;s Blog">
-<meta property="og:description" content="测试">
+<meta property="og:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-22T11:04:43.000Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20170414130035210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170414130105563?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170414130328471?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2018-06-06T16:09:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clay-test 语言测试">
-<meta name="twitter:description" content="测试">
+<meta name="twitter:title" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">
+<meta name="twitter:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170414130035210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="ClayZhang&#39;s Blog" type="application/atom+xml">
   
@@ -277,11 +281,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-clay-test" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-HttpClient+Jsoup 抓取网页信息（网易贵金属为例）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/05/17/clay-test/" class="article-date">
-      <time datetime="2018-05-17T10:46:04.000Z" itemprop="datePublished">2018-05-17</time>
+      <a  href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/" class="article-date">
+      <time datetime="2018-06-06T15:52:04.000Z" itemprop="datePublished">2018-06-06</time>
 </a>
 
     </div>
@@ -295,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      clay-test 语言测试
+      HttpClient+Jsoup 抓取网页信息（网易贵金属为例）
     </h1>
   
 
@@ -305,13 +309,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/深度学习/">深度学习</a>
+    <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HttpClient-Jsoup/">HttpClient+Jsoup</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -321,9 +325,31 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>测试<br><a id="more"></a></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""><br>Today , I have to make plans to learn Deep-Learning.<br>哈哈哈哈，测试一下</the></p>
+        <h2 id="HttpClient-Jsoup-抓取网页信息（网易贵金属为例）"><a href="#HttpClient-Jsoup-抓取网页信息（网易贵金属为例）" class="headerlink" title="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）"></a>HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</h2><p>废话不多说直接讲讲今天要做的事。</p>
+<p>利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。</p>
+<the rest="" of="" contents="" |="" 余下全文="">
 
+<p>jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 jQuery 的操作方法来操作数据。</p>
+<p>httpClient相关文档:<a href="http://hc.apache.org/httpcomponents-client-5.0.x/index.html" target="_blank" rel="noopener">http://hc.apache.org/httpcomponents-client-5.0.x/index.html</a></p>
+<p>jsoup相关文档:<a href="http://jsoup.org/" target="_blank" rel="noopener">http://jsoup.org/</a></p>
+<p>此处以网易贵金属资讯为例进行案例教学 O(∩_∩)O</p>
+<p><img src="http://img.blog.csdn.net/20170414130035210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后我们首先要分析网页源代码的结构</p>
+<p><img src="http://img.blog.csdn.net/20170414130105563?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>之后我们就可以开始进行编程了，首先我们要知道利用httpClient的流程：</p>
+<p>　　1. 创建HttpClient的对象；</p>
+<p>　　2. 创建请求方法的实例，并指定访问的URL；</p>
+<p>　　3. 调用HttpClient对象发送请求，该方法返回一个HttpResponse，要判断responce.getStatusLine().getStatusCode()的返回码是否为200；</p>
+<p>　　4. 调用HttpResponse相关方法获取相应内容；</p>
+<p>　　5. 释放连接。</p>
+<p>当然啦 创建项目的时候要导入相关的jar包，本文会提供源码+jar包<a href="http://pan.baidu.com/s/1sl55d85" target="_blank" rel="noopener">http://pan.baidu.com/s/1sl55d85</a></p>
+<p> StockUtils.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">package cn.clay.httpclient.utils;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">import org.apache.http.HttpEntity;</span><br><span class="line">import org.apache.http.HttpResponse;</span><br><span class="line">import org.apache.http.HttpStatus;</span><br><span class="line">import org.apache.http.client.HttpClient;</span><br><span class="line">import org.apache.http.client.methods.HttpGet;</span><br><span class="line">import org.apache.http.impl.client.CloseableHttpClient;</span><br><span class="line"></span><br><span class="line">import org.apache.http.impl.client.HttpClients;</span><br><span class="line">import org.apache.http.util.EntityUtils;</span><br><span class="line">/**</span><br><span class="line"> * 传递网页链接</span><br><span class="line"> * 返回网页源码</span><br><span class="line"> * @author ClayZhang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class StockUtils &#123;</span><br><span class="line">	//第一次获取网页源码</span><br><span class="line">	public static String getHtmlByUrl(String url) throws IOException&#123;  </span><br><span class="line">        String html = null;  </span><br><span class="line">        CloseableHttpClient httpClient = HttpClients.createDefault();//创建httpClient对象   </span><br><span class="line">        HttpGet httpget = new HttpGet(url);//以get方式请求该URL</span><br><span class="line">        try &#123;  </span><br><span class="line">            HttpResponse responce = httpClient.execute(httpget);//得到responce对象       </span><br><span class="line">            int resStatu = responce.getStatusLine().getStatusCode();//返回码</span><br><span class="line">            if (resStatu == HttpStatus.SC_OK) &#123;//200正常  其他就不对</span><br><span class="line">                //获得相应实体  </span><br><span class="line">                HttpEntity entity = responce.getEntity();  </span><br><span class="line">                if (entity != null) &#123;  </span><br><span class="line">                    html = EntityUtils.toString(entity);//获得html源代码</span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">        	System.out.println(&quot;访问【&quot;+url+&quot;】出现异常!&quot;);  </span><br><span class="line">            e.printStackTrace();  </span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">        	//关闭连接</span><br><span class="line">            httpClient.close();  </span><br><span class="line">        &#125;  </span><br><span class="line">        return html;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后利用jsoup的方法进行测试类的编写StockTest.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">package cn.clay.httpclient.utils.test;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">import org.apache.http.ParseException;</span><br><span class="line">import org.jsoup.Jsoup;</span><br><span class="line">import org.jsoup.nodes.Document;</span><br><span class="line">import org.jsoup.nodes.Element;</span><br><span class="line">import org.jsoup.select.Elements;</span><br><span class="line"></span><br><span class="line">import cn.clay.httpclient.utils.StockUtils;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * </span><br><span class="line"> * @author ClayZhang</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class StockTest &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) throws ParseException, IOException &#123;</span><br><span class="line">		String content = StockUtils.getHtmlByUrl(</span><br><span class="line">				&quot;http://fa.163.com/zx/gjs/1/&quot;);</span><br><span class="line">		parserHtml(content);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	public static void parserHtml(String content) throws ParseException, IOException &#123;</span><br><span class="line">		Document doc = Jsoup.parse(content);</span><br><span class="line">		Elements links = doc.getElementsByClass(&quot;g-news&quot;).select(&quot;dl&quot;);</span><br><span class="line">		for (Element e : links) &#123;</span><br><span class="line">			System.out.println(&quot;新闻标题:&quot; + e.select(&quot;a&quot;).text().toString());</span><br><span class="line">			//获取页面链接</span><br><span class="line">			Elements linkHref = e.select(&quot;a&quot;);</span><br><span class="line">			//截取时间字符串</span><br><span class="line">			Elements timeStr = e.select(&quot;span[class=f-fr]&quot;);</span><br><span class="line">			//简略信息</span><br><span class="line">			Elements comment = e.select(&quot;span[class=f-fl f-ofe u-digest]&quot;);</span><br><span class="line">			System.out.println(&quot;新闻链接:&quot; + linkHref.attr(&quot;href&quot;));</span><br><span class="line">			System.out.println(&quot;发布时间:&quot; + timeStr.text());</span><br><span class="line">			System.out.println(&quot;简要信息:&quot; + comment.text().toString());</span><br><span class="line">			</span><br><span class="line">			System.out.println(&quot;=============================================================&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行之后的效果如下<br><img src="http://img.blog.csdn.net/20170414130328471?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>本文版权归作者及CSDN所有，转载请注明作者及原文出处<br>也可关注<br><a href="http://www.cnblogs.com/clayzhang" target="_blank" rel="noopener">http://www.cnblogs.com/clayzhang</a></p>
+</the>
       
     </div>
     
@@ -331,13 +357,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/05/17/clay-test/">clay-test 语言测试</a></p>
+        <p><span>本文标题:</span><a  href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Clay Zhang 的个人博客">Clay Zhang</a></p>
-        <p><span>发布时间:</span>2018年05月17日 - 18时46分</p>
-        <p><span>最后更新:</span>2018年05月22日 - 19时04分</p>
+        <p><span>发布时间:</span>2018年06月06日 - 23时52分</p>
+        <p><span>最后更新:</span>2018年06月07日 - 00时09分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/17/clay-test/" title="clay-test 语言测试">http://clayzhang0403.github.io/2018/05/17/clay-test/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/05/17/clay-test/　　作者: Clay Zhang" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/" title="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/　　作者: Clay Zhang" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -348,18 +374,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/05/18/clay-test2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          clay-test2
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2018/05/17/clay-test3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">clay-test 语言测试</div>
+    <a  href="/2018/05/22/考研两三事（初试）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">考研那些事（初试）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -372,7 +389,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HttpClient-Jsoup-抓取网页信息（网易贵金属为例）"><span class="toc-number">1.</span> <span class="toc-text">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -445,13 +462,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/05/18/clay-test2/" title="上一篇: clay-test2">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/05/17/clay-test3/" title="下一篇: clay-test 语言测试">
+            <a  href="/2018/05/22/考研两三事（初试）/" title="下一篇: 考研那些事（初试）">
                 <i class="fa fa-angle-right"></i>
             </a>
         
