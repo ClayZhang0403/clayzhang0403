@@ -9,21 +9,21 @@
   
   <title>HttpClient+Jsoup 抓取网页信息（网易贵金属为例） | ClayZhang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
+  <meta name="description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。">
 <meta name="keywords" content="HttpClient+Jsoup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">
 <meta property="og:url" content="http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/index.html">
 <meta property="og:site_name" content="ClayZhang&#39;s Blog">
-<meta property="og:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
+<meta property="og:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.blog.csdn.net/20170414130035210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170414130105563?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170414130328471?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-06-06T16:12:12.000Z">
+<meta property="og:updated_time" content="2018-06-06T16:14:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">
-<meta name="twitter:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。 利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。   jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 j">
+<meta name="twitter:description" content="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）废话不多说直接讲讲今天要做的事。利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170414130035210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xheV9aaGFuZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="ClayZhang&#39;s Blog" type="application/atom+xml">
@@ -325,10 +325,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="HttpClient-Jsoup-抓取网页信息（网易贵金属为例）"><a href="#HttpClient-Jsoup-抓取网页信息（网易贵金属为例）" class="headerlink" title="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）"></a>HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</h2><p>废话不多说直接讲讲今天要做的事。</p>
-<p>利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。</p>
+        <h2 id="HttpClient-Jsoup-抓取网页信息（网易贵金属为例）"><a href="#HttpClient-Jsoup-抓取网页信息（网易贵金属为例）" class="headerlink" title="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）"></a>HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</h2><p>废话不多说直接讲讲今天要做的事。<br>利用HttpClient和Jsoup技术抓取网页信息。HttpClient是支持HTTP协议的客户端编程工具包，并且它支持HTTP协议。<br><a id="more"></a></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
+<hr>
 <p>jsoup 是一款基于 Java 平台的 网页html解析器，可直接解析某个 URL 地址、HTML 文本内容，提供了一套非常方便的 API接口，通过类似于 jQuery 的操作方法来操作数据。</p>
 <p>httpClient相关文档:<a href="http://hc.apache.org/httpcomponents-client-5.0.x/index.html" target="_blank" rel="noopener">http://hc.apache.org/httpcomponents-client-5.0.x/index.html</a></p>
 <p>jsoup相关文档:<a href="http://jsoup.org/" target="_blank" rel="noopener">http://jsoup.org/</a></p>
@@ -360,7 +360,7 @@
         <p><span>本文标题:</span><a  href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Clay Zhang 的个人博客">Clay Zhang</a></p>
         <p><span>发布时间:</span>2018年06月06日 - 23时52分</p>
-        <p><span>最后更新:</span>2018年06月07日 - 00时12分</p>
+        <p><span>最后更新:</span>2018年06月07日 - 00时14分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/" title="HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/</a>
             <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/　　作者: Clay Zhang" title=""></span>
