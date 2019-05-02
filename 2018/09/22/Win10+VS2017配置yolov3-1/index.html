@@ -7,19 +7,29 @@
   
   
   
-  <title>About | ClayZhang&#39;s Blog</title>
+  <title>Win10+VS2017配置yolov3（一） | ClayZhang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人简介作为一个非计算机专业出身的IT男，入行也是很曲折的。在大学的数学专业，其实对机械一点兴趣都没有，我初中，高中对通信和计算机最感兴趣，但是阴差阳错的成了数学专业的学生。在这里再说教育体制的问题，已经没有必要了。在大三才发觉那不是我想要的，我还是喜欢计算机！大三开始疯狂的学习了几个月java，终于踏入了程序员的行列！ 本博客的目的希望通过我自己的经历能够让学习编程的新手少走些一些弯路，同时我也">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://clayzhang0403.github.io/about/index.html">
+  <meta name="description" content="Win10+VS2017配置yolov3（一）默认大家都已经拥有了以下的环境，事实上cuda、cudnn的安装等同于傻瓜式操作，opencv如果不会的可以参考网上其他例子，也很简单的接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装的过程进行一个简单的说明">
+<meta name="keywords" content="深度学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10+VS2017配置yolov3（一）">
+<meta property="og:url" content="http://clayzhang0403.github.io/2018/09/22/Win10+VS2017配置yolov3-1/index.html">
 <meta property="og:site_name" content="ClayZhang&#39;s Blog">
-<meta property="og:description" content="个人简介作为一个非计算机专业出身的IT男，入行也是很曲折的。在大学的数学专业，其实对机械一点兴趣都没有，我初中，高中对通信和计算机最感兴趣，但是阴差阳错的成了数学专业的学生。在这里再说教育体制的问题，已经没有必要了。在大三才发觉那不是我想要的，我还是喜欢计算机！大三开始疯狂的学习了几个月java，终于踏入了程序员的行列！ 本博客的目的希望通过我自己的经历能够让学习编程的新手少走些一些弯路，同时我也">
+<meta property="og:description" content="Win10+VS2017配置yolov3（一）默认大家都已经拥有了以下的环境，事实上cuda、cudnn的安装等同于傻瓜式操作，opencv如果不会的可以参考网上其他例子，也很简单的接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装的过程进行一个简单的说明">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-17T14:55:04.000Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008225623968?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/2018100823081725?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008231754880?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008232858868?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008233341481?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181008233353520?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20181009124600738?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/2018100912555797?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2019-05-02T13:26:36.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="个人简介作为一个非计算机专业出身的IT男，入行也是很曲折的。在大学的数学专业，其实对机械一点兴趣都没有，我初中，高中对通信和计算机最感兴趣，但是阴差阳错的成了数学专业的学生。在这里再说教育体制的问题，已经没有必要了。在大三才发觉那不是我想要的，我还是喜欢计算机！大三开始疯狂的学习了几个月java，终于踏入了程序员的行列！ 本博客的目的希望通过我自己的经历能够让学习编程的新手少走些一些弯路，同时我也">
+<meta name="twitter:title" content="Win10+VS2017配置yolov3（一）">
+<meta name="twitter:description" content="Win10+VS2017配置yolov3（一）默认大家都已经拥有了以下的环境，事实上cuda、cudnn的安装等同于傻瓜式操作，opencv如果不会的可以参考网上其他例子，也很简单的接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装的过程进行一个简单的说明">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20181008225623968?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="ClayZhang&#39;s Blog" type="application/atom+xml">
   
@@ -44,7 +54,7 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -276,11 +286,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Win10+VS2017配置yolov3-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/about/index.html" class="article-date">
-      <time datetime="2018-05-17T13:32:43.000Z" itemprop="datePublished">2018-05-17</time>
+      <a  href="/2018/09/22/Win10+VS2017配置yolov3-1/" class="article-date">
+      <time datetime="2018-09-22T11:44:04.000Z" itemprop="datePublished">2018-09-22</time>
 </a>
 
     </div>
@@ -294,7 +304,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      About
+      Win10+VS2017配置yolov3（一）
     </h1>
   
 
@@ -303,8 +313,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -312,58 +330,103 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta {
-        display: none;
-    }
-    #container .article .article-title {
-        padding-right: 0;
-    }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 1.6em
-    }
-    .article-meta {
-        display: none;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    #container .article-info-post.article-info {
-      display: none;
-      }
-    #container .article .article-title {
-    padding: 0;
-    }
-</style>
+        <h2 id="Win10-VS2017配置yolov3（一）"><a href="#Win10-VS2017配置yolov3（一）" class="headerlink" title="Win10+VS2017配置yolov3（一）"></a>Win10+VS2017配置yolov3（一）</h2><p>默认大家都已经拥有了以下的环境，事实上cuda、cudnn的安装等同于傻瓜式操作，opencv如果不会的可以参考网上其他例子，也很简单的<br>接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装的过程进行一个简单的说明<br><a id="more"></a></p>
+<the rest="" of="" contents="" |="" 余下全文="">
 
-
-          
-        <h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>作为一个非计算机专业出身的IT男，入行也是很曲折的。在大学的数学专业，其实对机械一点兴趣都没有，我初中，高中对通信和计算机最感兴趣，但是阴差阳错的成了数学专业的学生。在这里再说教育体制的问题，已经没有必要了。在大三才发觉那不是我想要的，我还是喜欢计算机！大三开始疯狂的学习了几个月java，终于踏入了程序员的行列！</p>
-<h2 id="本博客的目的"><a href="#本博客的目的" class="headerlink" title="本博客的目的"></a>本博客的目的</h2><p>希望通过我自己的经历能够让学习编程的新手少走些一些弯路，同时我也不会拿官网的hello world教程放在这里，都拿官网的hello world做博客没有意义。我会重点介绍一些学习编程的方法，还有学习专业技能的方法，有了方法学起来事半功倍！</p>
-<h2 id="兴趣"><a href="#兴趣" class="headerlink" title="兴趣"></a>兴趣</h2><p>运动：篮球，乒乓球，羽毛球都喜欢，最爱的还是篮球<br>动漫：火影，海贼，秦时明月等等<br>旅行：人文，历史类偏爱<br>分享：喜欢把自己的经验分享给大家<br>读书：小说，历史，专业书籍，最喜欢现实主义小说，最喜欢悲剧</p>
-<h2 id="欢迎留言"><a href="#欢迎留言" class="headerlink" title="欢迎留言"></a>欢迎留言</h2><p>如果有什么建议和想法，都可以和我留言，可以在博客下面留言，也可以去我的微博留言，必有回应！</p>
-
+<hr>
+<p>本人的电脑配置：<br>CPU：i7-8700k<br>GPU：GTX-1080ti<br>操作系统：Windows 10 专业版 64bit<br>CUDA：9.0<br>CUDNN：7.3<br>OenpCV：3.3<br>IDE：VS2017</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>WIndows版本的yolov3就是去AB大神的git上去下载(后续也会提供本人的代码提供大家下载)<br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">下载地址</a></p>
+<p>大家将darknet这个项目下载下来，位置可以任意，同时大家检查一下vs2017的安装包工具，名字叫visual studio installer<br><img src="https://img-blog.csdn.net/20181008225623968?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<p>VS2017有个好处就是可以帮你一次性集成很多的你需要的工具包，这里我们强调一下，记住这个v140一定要勾上，咱们vs2017安装时装的是v141的，我们只有手动勾上。然后就等待安装，最好默认路径安装，免得容易出各种怪错，这样在项目开启的时候就可以重定向到vs2015的平台去运行了</p>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在darknet-master/build/darknet下有很多的vs的项目文件，根据个人的需要选择gpu版或者no-gpu版本，在打开项目之前首先去修改同一目录下相对应的darknet.vcxproj文件（有GPU的版本，本文的例子基于gpu版，no-gpu版本可以模仿）<br>由于darknet.vcxproj 中使用的是CUDA 9.1,所以需要利用编辑器（记事本即可或者sublime）打开darknet.vcxproj ，将所有CUDA 9.1修改为自己对应的CUDA版本，本人使用CUDA 9.0(CUDA与9.0之间有一个空格)，全部replace：</p>
+<p><img src="https://img-blog.csdn.net/2018100823081725?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>打开darknet.sln，将项目改为release x64，同时点击项目，然后重定向解决方案，一定要选择无升级，这样就可以把编译平台停在vs2015，以免其他错误发生<br><img src="https://img-blog.csdn.net/20181008231754880?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<p>同时修改项目属性，选择vs2015的工具平台<br><img src="https://img-blog.csdn.net/20181008232858868?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<p>然后在 VC++目录–&gt;包含目录–&gt;编辑        添加：…\opencv\build\include（…就是你自己opencv安装的目录）<br>同时在库目录下也同意的操作，加入lib的目录，如下图<br><img src="https://img-blog.csdn.net/20181008233341481?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdn.net/20181008233353520?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br>接着 选择连接器<br>链接器添加方法：添加目录…\opencv\build\x64\vc14\lib下库的名字：opencv_world330.lib,根据你们opencv的版本号来<br><img src="https://img-blog.csdn.net/20181009124600738?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>CUDA 9.0.props 等文件就在cuda的安装目录下，本人路径是：C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\extras\visual_studio_integration\MSBuildExtensions拷贝所有文件到C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\BuildCustomizations。</p>
+<p>同时将..\opencv\build\x64\vc14\bin下的opencv_world330.dll 和opencv_ffmpeg330_64.dll 复制到 \darknet\darknet-master\build\darknet\x64 目录下。即可</p>
+<h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><p>右键工程项目，点击重新生成，一般如果严格按照本文的教程时不会出现错误的，之后只需要进行测试即可，如有报错请私信</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>在github上下载作者训练好的模型，网址：<a href="https://github.com/AlexeyAB/darknet/blob/master/README.md" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet/blob/master/README.md</a><br>下载后放在..\darknet-master\build\darknet\x64下，打开该目录，双击darknet_yolo_v3.cmd会出现以下结果，表明成功编译。<br><img src="https://img-blog.csdn.net/2018100912555797?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<p>如果需要训练自己的数据，可以参照本人的第二篇博文，有什么问题都可以提问<br><a href="https://blog.csdn.net/Clay_Zhang/article/details/89290065" target="_blank" rel="noopener">https://blog.csdn.net/Clay_Zhang/article/details/89290065</a></p>
+</the>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/09/22/Win10+VS2017配置yolov3-1/">Win10+VS2017配置yolov3（一）</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Clay Zhang 的个人博客">Clay Zhang</a></p>
+        <p><span>发布时间:</span>2018年09月22日 - 19时44分</p>
+        <p><span>最后更新:</span>2019年05月02日 - 21时26分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/22/Win10+VS2017配置yolov3-1/" title="Win10+VS2017配置yolov3（一）">http://clayzhang0403.github.io/2018/09/22/Win10+VS2017配置yolov3-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/09/22/Win10+VS2017配置yolov3-1/　　作者: Clay Zhang" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
 
   
 
 </article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Win10-VS2017配置yolov3（一）"><span class="toc-number">1.</span> <span class="toc-text">Win10+VS2017配置yolov3（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步"><span class="toc-number">2.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步"><span class="toc-number">3.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步"><span class="toc-number">4.</span> <span class="toc-text">第三步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步"><span class="toc-number">5.</span> <span class="toc-text">第四步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五步"><span class="toc-number">6.</span> <span class="toc-text">第五步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-number">7.</span> <span class="toc-text">测试</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
 
 
 
@@ -396,6 +459,41 @@
     
 
 
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/" title="下一篇: HttpClient+Jsoup 抓取网页信息（网易贵金属为例）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/22/Win10+VS2017配置yolov3-1/">Win10+VS2017配置yolov3（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/考研两三事（初试）/">考研那些事（初试）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/18/clay-test2/">clay-test2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/17/clay-test3/">clay-test 语言测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/17/clay-test/">clay-test 语言测试</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
