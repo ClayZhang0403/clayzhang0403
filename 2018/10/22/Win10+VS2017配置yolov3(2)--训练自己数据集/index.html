@@ -7,20 +7,36 @@
   
   
   
-  <title>clay-test 语言测试 | ClayZhang&#39;s Blog</title>
+  <title>Win10+VS2017配置yolov3(2)--训练自己数据集 | ClayZhang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试">
-<meta name="keywords" content="test">
+  <meta name="description" content="Win10+VS2017配置yolov3(2)–训练自己数据集接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装如何训练自己的数据进行一个简单的说明">
+<meta name="keywords" content="深度学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="clay-test 语言测试">
-<meta property="og:url" content="http://clayzhang0403.github.io/2018/05/17/clay-test3/index.html">
+<meta property="og:title" content="Win10+VS2017配置yolov3(2)--训练自己数据集">
+<meta property="og:url" content="http://clayzhang0403.github.io/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/index.html">
 <meta property="og:site_name" content="ClayZhang&#39;s Blog">
-<meta property="og:description" content="测试">
+<meta property="og:description" content="Win10+VS2017配置yolov3(2)–训练自己数据集接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装如何训练自己的数据进行一个简单的说明">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-22T11:17:52.000Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221245550.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221316432.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221343961.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221435994.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221441899.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221459343.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221525594.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221537825.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221606946.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221621353.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221645301.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221714330.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221726425.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221741424.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190413221753997.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-05-02T13:37:08.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clay-test 语言测试">
-<meta name="twitter:description" content="测试">
+<meta name="twitter:title" content="Win10+VS2017配置yolov3(2)--训练自己数据集">
+<meta name="twitter:description" content="Win10+VS2017配置yolov3(2)–训练自己数据集接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装如何训练自己的数据进行一个简单的说明">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190413221245550.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="ClayZhang&#39;s Blog" type="application/atom+xml">
   
@@ -277,11 +293,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-clay-test3" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Win10+VS2017配置yolov3(2)--训练自己数据集" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/05/17/clay-test3/" class="article-date">
-      <time datetime="2018-05-17T10:46:04.000Z" itemprop="datePublished">2018-05-17</time>
+      <a  href="/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/" class="article-date">
+      <time datetime="2018-10-22T11:44:04.000Z" itemprop="datePublished">2018-10-22</time>
 </a>
 
     </div>
@@ -295,7 +311,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      clay-test 语言测试
+      Win10+VS2017配置yolov3(2)--训练自己数据集
     </h1>
   
 
@@ -305,13 +321,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
+    <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -321,9 +337,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>测试<br><a id="more"></a></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""><br>Today , I have to make plans to learn Deep-Learning.<br>哈哈哈哈，测试一下</the></p>
+        <h2 id="Win10-VS2017配置yolov3-2-–训练自己数据集"><a href="#Win10-VS2017配置yolov3-2-–训练自己数据集" class="headerlink" title="Win10+VS2017配置yolov3(2)–训练自己数据集"></a>Win10+VS2017配置yolov3(2)–训练自己数据集</h2><p>接着就是去下载咱们yolov3的代码了，强烈推荐大家去用linux版本，当然你们系统肯定得是linux，但是为了广大windows用户的需求，这里将windows10下安装如何训练自己的数据进行一个简单的说明<br><a id="more"></a></p>
+<the rest="" of="" contents="" |="" 余下全文="">
 
+<hr>
+<h2 id="距离上一篇过去好久、一直没时间写，接着回顾一下-之前的配置"><a href="#距离上一篇过去好久、一直没时间写，接着回顾一下-之前的配置" class="headerlink" title="距离上一篇过去好久、一直没时间写，接着回顾一下 之前的配置"></a>距离上一篇过去好久、一直没时间写，接着回顾一下 之前的配置</h2><p>本人的电脑配置：<br>CPU：i7-8700k<br>GPU：GTX-1080ti<br>操作系统：Windows 10 专业版 64bit<br>CUDA：9.0<br>CUDNN：7.3<br>OenpCV：3.3<br>IDE：VS2017</p>
+<p><strong>Step1</strong>:假设拿到一批数据，其中包含五类，如下图所示<br><img src="https://img-blog.csdnimg.cn/20190413221245550.jpeg" alt="在这里插入图片描述"><br>首先使用match_quantity.py脚本分别将每个类中的“情侣文件”（图片名和XML文件对应的文件）匹配出来，仅需修改如下两处（所需文件后续会提供）<br><img src="https://img-blog.csdnimg.cn/20190413221316432.jpeg" alt="在这里插入图片描述"><br>如下图为一个类的匹配结果，肯定是偶数个，且图片名和xml一一对应。<br><img src="https://img-blog.csdnimg.cn/20190413221343961.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其他类也参照相同的方法即可。</p>
+<p><strong>Step2</strong>：接着使用rename.py将所有生成好的图片和xml重命名，规则为  类名-原文件名 如仅需修改以下路径即可（此处注意，xml重命名后在xml文件中的filename标签下的文件名也要改变，可以使用sublime、vscode等工具批量更改）<br><img src="https://img-blog.csdnimg.cn/20190413221435994.jpeg" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190413221441899.jpeg" alt="在这里插入图片描述"><br><strong>Step3</strong>:然后使用voc_to_icdar13.py读取xml，将关键信息（文件名、坐标信息、大小等）生成txt，使用my_icdar13_to_voc.py重新生成xml文件 （这么做的目的是防止xml中出现size为0的情况）<br><img src="https://img-blog.csdnimg.cn/20190413221459343.jpeg" alt="在这里插入图片描述"><br>生成的txt中包含坐标，类名，以及width和height<br><img src="https://img-blog.csdnimg.cn/20190413221525594.jpeg" alt="在这里插入图片描述"><br>使用my_icdar13_to_voc.py重新生成xml文件，转化过程<br><img src="https://img-blog.csdnimg.cn/20190413221537825.jpeg" alt="在这里插入图片描述"><br>之后将生成好的xml和图片准备待用</p>
+<p><strong>Step4</strong>:接着我们准备VOC的数据集，请严格按照如下的目录进行，将xml文件全部放入Annotations，将所有图片放入JPEGImages即可<br><img src="https://img-blog.csdnimg.cn/20190413221606946.jpeg" alt="在这里插入图片描述"><br>然后运行first-test.py，将数据集按照二八原则（20%验证集+80%训练集）进行分配，会在Main中生成train.txt和val.txt的文件。<br>接着运行voc_label.py，将训练集和验证集路径导入txt文件中，就会生成如下两个文件<br><img src="https://img-blog.csdnimg.cn/20190413221621353.jpeg" alt="在这里插入图片描述"><br><strong>Step5</strong>:接着修改data下的voc.names, 将要训练的类名写上，再接着就是去修改data下的voc.data文件，classes就是写你有几个类，train就写之前生成的训练集的路径，valid就写刚刚生成的验证集的路径<br><img src="https://img-blog.csdnimg.cn/20190413221645301.jpeg" alt="在这里插入图片描述"><br><strong>Step6</strong>:最后修改cfg/yolov3-voc.cfg<br>yolo层的上一层卷积层的filter和类别classes<br>filter=(num/3)×（classes + coords + 1） coords=4<br>把Training的参数设置打开，Testing的参数设置关闭<br><img src="https://img-blog.csdnimg.cn/20190413221714330.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以搜索yolo，共有三处如下的地方需要修改，filters的数量遵循 (num/3)×（classes +5），classes为类的数量<br><img src="https://img-blog.csdnimg.cn/20190413221726425.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>最后就可以开始训练了<br>darknet.exe detector train data/voc.data cfg/yolov3-voc.cfg darknet53.conv.74 -i 0 -map<br><img src="https://img-blog.csdnimg.cn/20190413221741424.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>也会有avg loss实时的显示<br><img src="https://img-blog.csdnimg.cn/20190413221753997.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NsYXlfWmhhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>相关的python文件附下载地址：<a href="https://download.csdn.net/download/clay_zhang/11112842" target="_blank" rel="noopener">https://download.csdn.net/download/clay_zhang/11112842</a><br>后续会更新如何检测Ap、MAp以及测试等操作</p>
+</the>
       
     </div>
     
@@ -331,13 +353,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/05/17/clay-test3/">clay-test 语言测试</a></p>
+        <p><span>本文标题:</span><a  href="/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/">Win10+VS2017配置yolov3(2)--训练自己数据集</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Clay Zhang 的个人博客">Clay Zhang</a></p>
-        <p><span>发布时间:</span>2018年05月17日 - 18时46分</p>
-        <p><span>最后更新:</span>2018年05月22日 - 19时17分</p>
+        <p><span>发布时间:</span>2018年10月22日 - 19时44分</p>
+        <p><span>最后更新:</span>2019年05月02日 - 21时37分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/17/clay-test3/" title="clay-test 语言测试">http://clayzhang0403.github.io/2018/05/17/clay-test3/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/05/17/clay-test3/　　作者: Clay Zhang" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/" title="Win10+VS2017配置yolov3(2)--训练自己数据集">http://clayzhang0403.github.io/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://clayzhang0403.github.io/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/　　作者: Clay Zhang" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -348,15 +370,11 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/05/17/clay-test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          clay-test 语言测试
-        
-      </div>
-    </a>
   
+    <a  href="/2018/09/22/Win10+VS2017配置yolov3-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Win10+VS2017配置yolov3（一）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -367,7 +385,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Win10-VS2017配置yolov3-2-–训练自己数据集"><span class="toc-number">1.</span> <span class="toc-text">Win10+VS2017配置yolov3(2)–训练自己数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#距离上一篇过去好久、一直没时间写，接着回顾一下-之前的配置"><span class="toc-number">2.</span> <span class="toc-text">距离上一篇过去好久、一直没时间写，接着回顾一下 之前的配置</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -440,13 +458,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/05/17/clay-test/" title="上一篇: clay-test 语言测试">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2018/09/22/Win10+VS2017配置yolov3-1/" title="下一篇: Win10+VS2017配置yolov3（一）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/22/Win10+VS2017配置yolov3(2)--训练自己数据集/">Win10+VS2017配置yolov3(2)--训练自己数据集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/22/Win10+VS2017配置yolov3-1/">Win10+VS2017配置yolov3（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/06/HttpClient+Jsoup 抓取网页信息（网易贵金属为例）/">HttpClient+Jsoup 抓取网页信息（网易贵金属为例）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/考研两三事（初试）/">考研那些事（初试）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/18/clay-test2/">clay-test2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/17/clay-test/">clay-test 语言测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/17/clay-test3/">clay-test 语言测试</a></li></ul>
